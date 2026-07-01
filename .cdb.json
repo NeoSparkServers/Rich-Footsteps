@@ -1,0 +1,11 @@
+{
+  "type": "MOD",
+  "title": "Rich Footsteps",
+  "short_description": "Rich footstep sounds for Mineclonia, VoxeLibre, and Minetest Game.",
+  "dev_state": "BETA",
+  "license": "LGPL-3.0-or-later",
+  "media_license": "MIT",
+  "ai_disclosure": "ASSISTED",
+  "tags": ["sound_music"],
+  "long_description": "Rich Footsteps is a Luanti mod that adds rich positional footstep sounds for Mineclonia, VoxeLibre, Minetest Game, and compatible games. It is an unofficial port/reimplementation inspired by the MIT-licensed Presence Footsteps 1.13.0+26.1 baseline, and is not affiliated with, endorsed by, or maintained by the original Presence Footsteps authors. No assets, data, or code from Presence Footsteps 1.13.2+26.1 or later are used. It supports player walking, running, stairs, climbing, jumping, landing, liquids, foliage, wet/liquid layers, footwear layers, biome variance, substrate-aware primitive/blockmap fallback, and material-based sound variation. Experimental entity/object footsteps plus API-controlled quadruped and winged player locomotion are conservative by default. New Luanti port code is LGPL-3.0-or-later; bundled upstream-origin sound assets and converted upstream-origin data preserve the upstream MIT notice."
+}

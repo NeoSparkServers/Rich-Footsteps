@@ -1,0 +1,16 @@
+.runtime/
+worlds/
+debug.txt
+*.log
+*.tmp
+*.bak
+*.zip
+*.7z
+*.tar
+*.tar.gz
+node_modules/
+.DS_Store
+Thumbs.db
+Presence-Footsteps-1.13.0-26.1/
+thinking.md
+Mod is Done.txt

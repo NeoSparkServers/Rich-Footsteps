@@ -1,0 +1,22 @@
+presence_footsteps_enabled (Enable Presence Footsteps) bool true
+presence_footsteps_gain (Global footsteps gain) float 1.0 0.0 4.0
+presence_footsteps_max_hear_distance (Maximum hear distance) int 16 1 64
+presence_footsteps_replace_builtin (Replace built-in mapped node footsteps) bool true
+presence_footsteps_replace_inferred_builtin (Also replace inferred node footsteps, slower startup) bool false
+presence_footsteps_stand_sounds (Enable rare standing sounds) bool false
+presence_footsteps_foliage (Enable foliage brush sounds) bool true
+presence_footsteps_foliage_gain (Foliage brush gain) float 0.65 0.0 4.0
+presence_footsteps_wet_surfaces (Enable wet weather footstep layer) bool true
+presence_footsteps_wet_gain (Wet weather layer gain) float 0.5 0.0 4.0
+presence_footsteps_footwear (Enable boot/footwear layer) bool true
+presence_footsteps_player_gain (Own player footstep gain) float 1.0 0.0 4.0
+presence_footsteps_other_player_gain (Other player footstep gain) float 1.0 0.0 4.0
+presence_footsteps_entities (Enable experimental entity footsteps) bool false
+presence_footsteps_max_entities (Maximum stepping entities) int 50 1 200
+presence_footsteps_entity_targets (Entity footstep targets) enum all all,players_and_hostiles,players_only
+presence_footsteps_ignored_entities (Additional ignored entity names) string
+presence_footsteps_passive_entity_gain (Passive entity footstep gain) float 0.7 0.0 4.0
+presence_footsteps_hostile_entity_gain (Hostile entity footstep gain) float 0.85 0.0 4.0
+presence_footsteps_object_gain (Object/vehicle footstep gain) float 0.75 0.0 4.0
+presence_footsteps_winged_players (Enable API-controlled winged player locomotion) bool false
+presence_footsteps_debug (Enable debug logging) bool false
