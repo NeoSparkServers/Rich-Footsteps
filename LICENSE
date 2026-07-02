@@ -16,7 +16,7 @@ servers, while modifications to the LGPL-covered port code should remain free.
 Bundled upstream-origin media and converted upstream-origin data remain under
 the upstream MIT License, with the upstream copyright notice preserved:
 
-  SPDX-License-Identifier: MIT
+  
 
 This includes the bundled `sounds/*.ogg` files and generated/converted mapping
 data derived from the local Presence Footsteps source package used for this
