@@ -44,6 +44,33 @@ function checkLuaDataFile(file, acoustics) {
   }
 }
 
+function validateMclCherryStairs() {
+  const text = read(path.join(dataDir, "mcl_nodes.lua"));
+  const mappings = new Map();
+  for (const match of text.matchAll(/add\("mcl_stairs",\s*\{([\s\S]*?)\},\s*"([^"]+)"\)/g)) {
+    for (const name of match[1].matchAll(/"([^"]+)"/g)) {
+      mappings.set(name[1], match[2]);
+    }
+  }
+
+  for (const name of [
+    "stair_cherrywood",
+    "slab_cherrywood",
+    "stair_cherry_blossom",
+    "slab_cherry_blossom",
+    "stair_cherry_blossom_bark",
+    "stair_cherry_blossom_bark_inner",
+    "stair_cherry_blossom_bark_outer",
+    "slab_cherry_blossom_bark",
+    "slab_cherry_blossom_bark_top",
+    "slab_cherry_blossom_bark_double",
+  ]) {
+    if (mappings.get(name) !== "softwood") {
+      errors.push(`mcl_nodes.lua: expected mcl_stairs:${name} to map to softwood`);
+    }
+  }
+}
+
 function validateCdb() {
   const cdb = JSON.parse(read(path.join(modDir, ".cdb.json")));
   if (cdb.title !== "Rich Footsteps") {
@@ -202,6 +229,7 @@ function validateMonoOgg() {
 validateCdb();
 validateMetadataText();
 validateLicenseFiles();
+validateMclCherryStairs();
 const counts = validateRefs();
 validateNoJavaArtifacts();
 validateMonoOgg();

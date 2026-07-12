@@ -266,6 +266,23 @@ add("mcl_cherry_blossom", {
 }, "softwood")
 
 add("mcl_trees", {
+	"tree_cherry_blossom", "wood_cherry_blossom", "bark_cherry_blossom",
+	"stripped_cherry_blossom", "bark_stripped_cherry_blossom",
+}, "softwood")
+
+add("mcl_stairs", {
+	-- VoxeLibre names.
+	"stair_cherrywood", "stair_cherrywood_inner", "stair_cherrywood_outer",
+	"slab_cherrywood", "slab_cherrywood_top", "slab_cherrywood_double",
+	-- Mineclonia plank and bark names.
+	"stair_cherry_blossom", "stair_cherry_blossom_inner", "stair_cherry_blossom_outer",
+	"slab_cherry_blossom", "slab_cherry_blossom_top", "slab_cherry_blossom_double",
+	"stair_cherry_blossom_bark", "stair_cherry_blossom_bark_inner",
+	"stair_cherry_blossom_bark_outer", "slab_cherry_blossom_bark",
+	"slab_cherry_blossom_bark_top", "slab_cherry_blossom_bark_double",
+}, "softwood")
+
+add("mcl_trees", {
 	"tree_oak", "tree_birch", "tree_spruce", "tree_jungle", "tree_dark_oak",
 	"tree_mangrove", "tree_cherry", "wood_oak", "wood_birch", "wood_spruce",
 	"wood_jungle", "wood_dark_oak", "mangrove_wood", "cherry_wood",
