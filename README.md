@@ -65,9 +65,9 @@ playback without forcing thousands of item overrides during load.
 - `presence_footsteps_max_hear_distance`: positional sound range.
 - `presence_footsteps_replace_builtin`: mute built-in footsteps on known mapped
   nodes, reducing doubled sounds.
-- `presence_footsteps_replace_inferred_builtin`: also mute broad inferred
-  group/name fallback nodes. This can reduce duplicates for many third-party
-  nodes, but may make large games start much slower.
+- `presence_footsteps_replace_inferred_builtin`: also mute built-in footsteps
+  on inferred group/name fallback and blockmap nodes, so mapped surfaces do not
+  double with the game's default step sounds. Enabled by default.
 - `presence_footsteps_stand_sounds`: rare stationary sounds, disabled by
   default.
 - `presence_footsteps_foliage`: occasional brush sounds while entering or

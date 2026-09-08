@@ -392,4 +392,117 @@ add_stairs({
 	"crimson", "crimson_hyphae", "warped", "warped_hyphae",
 }, "wood,mushroom")
 
+
+-- Mineclonia 0.14+/VoxeLibre restructured families (2026-09): trees
+-- moved to mcl_trees, copper to mcl_copper, chest variants to
+-- mcl_chests, quartz to mcl_nether. Exact mappings keep built-in
+-- footsteps eagerly muted and acoustics consistent for these.
+
+add("mcl_trees", {
+	"leaves_acacia", "leaves_acacia_orphan", "leaves_azalea", "leaves_azalea_flowering",
+	"leaves_azalea_flowering_orphan", "leaves_azalea_orphan", "leaves_birch_orphan",
+	"leaves_cherry_blossom", "leaves_cherry_blossom_orphan", "leaves_dark_oak_orphan",
+	"leaves_jungle_orphan", "leaves_mangrove_orphan", "leaves_oak_orphan", "leaves_pale_oak",
+	"leaves_pale_oak_orphan", "leaves_spruce_orphan",
+}, "leaves")
+
+add("mcl_trees", {
+	"bark_cherry_blossom", "bark_mangrove", "bark_stripped_cherry_blossom",
+	"bark_stripped_mangrove", "stripped_cherry_blossom", "stripped_mangrove",
+	"tree_cherry_blossom", "wood_cherry_blossom", "wood_mangrove",
+}, "softwood")
+
+add("mcl_trees", {
+	"bark_pale_oak", "bark_stripped_pale_oak", "stripped_pale_oak", "tree_pale_oak",
+	"wood_pale_oak",
+}, "softwood,creaking")
+
+add("mcl_trees", {
+	"stripped_bamboo", "tree_bamboo", "wood_bamboo",
+}, "squeakywood")
+
+add("mcl_trees", {
+	"bark_acacia", "bark_birch", "bark_dark_oak", "bark_jungle", "bark_oak", "bark_spruce",
+	"bark_stripped_acacia", "bark_stripped_birch", "bark_stripped_dark_oak",
+	"bark_stripped_jungle", "bark_stripped_oak", "bark_stripped_spruce", "stripped_acacia",
+	"stripped_birch", "stripped_dark_oak", "stripped_jungle", "stripped_oak", "stripped_spruce",
+	"tree_acacia", "wood_acacia",
+}, "wood")
+
+add("mcl_trees", {
+	"bark_crimson", "bark_stripped_crimson", "bark_stripped_warped", "bark_warped",
+	"stripped_crimson", "stripped_warped", "tree_crimson", "tree_warped", "wood_crimson",
+	"wood_warped",
+}, "wood,mushroom")
+
+add("mcl_copper", {
+	"block", "block_chiseled", "block_chiseled_preserved", "block_cut", "block_cut_preserved",
+	"block_exposed", "block_exposed_chiseled", "block_exposed_chiseled_preserved",
+	"block_exposed_cut", "block_exposed_cut_preserved", "block_exposed_grate",
+	"block_exposed_grate_preserved", "block_exposed_preserved", "block_grate",
+	"block_grate_preserved", "block_oxidized", "block_oxidized_chiseled",
+	"block_oxidized_chiseled_preserved", "block_oxidized_cut", "block_oxidized_cut_preserved",
+	"block_oxidized_grate", "block_oxidized_grate_preserved", "block_oxidized_preserved",
+	"block_preserved", "block_raw", "block_weathered", "block_weathered_chiseled",
+	"block_weathered_chiseled_preserved", "block_weathered_cut", "block_weathered_cut_preserved",
+	"block_weathered_grate", "block_weathered_grate_preserved", "block_weathered_preserved",
+	"bulb_exposed_off", "bulb_exposed_off_powered", "bulb_exposed_off_powered_preserved",
+	"bulb_exposed_off_preserved", "bulb_exposed_on", "bulb_exposed_on_powered",
+	"bulb_exposed_on_powered_preserved", "bulb_exposed_on_preserved", "bulb_off",
+	"bulb_off_powered", "bulb_off_powered_preserved", "bulb_off_preserved", "bulb_on",
+	"bulb_on_powered", "bulb_on_powered_preserved", "bulb_on_preserved", "bulb_oxidized_off",
+	"bulb_oxidized_off_powered", "bulb_oxidized_off_powered_preserved",
+	"bulb_oxidized_off_preserved", "bulb_oxidized_on", "bulb_oxidized_on_powered",
+	"bulb_oxidized_on_powered_preserved", "bulb_oxidized_on_preserved", "bulb_weathered_off",
+	"bulb_weathered_off_powered", "bulb_weathered_off_powered_preserved",
+	"bulb_weathered_off_preserved", "bulb_weathered_on", "bulb_weathered_on_powered",
+	"bulb_weathered_on_powered_preserved", "bulb_weathered_on_preserved", "door", "door_b_1",
+	"door_b_2", "door_exposed", "door_exposed_b_1", "door_exposed_b_2", "door_exposed_preserved",
+	"door_exposed_preserved_b_1", "door_exposed_preserved_b_2", "door_exposed_preserved_t_1",
+	"door_exposed_preserved_t_2", "door_exposed_t_1", "door_exposed_t_2", "door_oxidized",
+	"door_oxidized_b_1", "door_oxidized_b_2", "door_oxidized_preserved",
+	"door_oxidized_preserved_b_1", "door_oxidized_preserved_b_2", "door_oxidized_preserved_t_1",
+	"door_oxidized_preserved_t_2", "door_oxidized_t_1", "door_oxidized_t_2", "door_preserved",
+	"door_preserved_b_1", "door_preserved_b_2", "door_preserved_t_1", "door_preserved_t_2",
+	"door_t_1", "door_t_2", "door_weathered", "door_weathered_b_1", "door_weathered_b_2",
+	"door_weathered_preserved", "door_weathered_preserved_b_1", "door_weathered_preserved_b_2",
+	"door_weathered_preserved_t_1", "door_weathered_preserved_t_2", "door_weathered_t_1",
+	"door_weathered_t_2", "stone_with_copper", "trapdoor", "trapdoor_exposed",
+	"trapdoor_exposed_preserved", "trapdoor_oxidized", "trapdoor_oxidized_preserved",
+	"trapdoor_preserved", "trapdoor_weathered", "trapdoor_weathered_preserved", "waxed_block",
+	"waxed_block_cut", "waxed_block_exposed", "waxed_block_exposed_cut", "waxed_block_oxidized",
+	"waxed_block_oxidized_cut", "waxed_block_weathered", "waxed_block_weathered_cut",
+}, "copper")
+
+add("mcl_chests", {
+	"black_shulker_box", "black_shulker_box_small", "blue_shulker_box", "blue_shulker_box_small",
+	"brown_shulker_box", "brown_shulker_box_small", "chest_left", "chest_right", "chest_small",
+	"cyan_shulker_box", "cyan_shulker_box_small", "dark_green_shulker_box",
+	"dark_green_shulker_box_small", "dark_grey_shulker_box", "dark_grey_shulker_box_small",
+	"ender_chest_small", "green_shulker_box", "green_shulker_box_small", "grey_shulker_box",
+	"grey_shulker_box_small", "lightblue_shulker_box", "lightblue_shulker_box_small",
+	"magenta_shulker_box", "magenta_shulker_box_small", "orange_shulker_box",
+	"orange_shulker_box_small", "pink_shulker_box", "pink_shulker_box_small", "red_shulker_box",
+	"red_shulker_box_small", "trapped_chest", "trapped_chest_left", "trapped_chest_on",
+	"trapped_chest_on_left", "trapped_chest_on_right", "trapped_chest_on_small",
+	"trapped_chest_right", "trapped_chest_small", "violet_shulker_box",
+	"violet_shulker_box_small", "white_shulker_box", "white_shulker_box_small",
+	"yellow_shulker_box", "yellow_shulker_box_small",
+}, "squeakywood")
+
+add("mcl_nether", {
+	"quartz_block", "quartz_chiseled", "quartz_pillar", "quartz_smooth",
+}, "marble")
+
+add("mcl_stairs", {
+	"stair_quartzblock", "stair_quartzblock_inner", "stair_quartzblock_outer",
+	"stair_quartz_smooth", "stair_quartz_smooth_inner", "stair_quartz_smooth_outer",
+	"slab_quartzblock", "slab_quartzblock_top", "slab_quartzblock_double",
+	"slab_quartz_smooth", "slab_quartz_smooth_top", "slab_quartz_smooth_double",
+}, "marble")
+
+nodes["mcl_blackstone:quartz_brick"] = "marble"
+nodes["mcl_noteblock:noteblock"] = "woodutility"
+nodes["mesecons_noteblock:noteblock"] = "woodutility"
+
 return nodes
