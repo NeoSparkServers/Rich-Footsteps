@@ -33,36 +33,47 @@ local function setting_string(name, default)
 	return value
 end
 
-pf.settings = {
-	enabled = setting_bool("presence_footsteps_enabled", true),
-	gain = setting_number("presence_footsteps_gain", 1.0, 0),
-	max_hear_distance = setting_number("presence_footsteps_max_hear_distance", 16, 1),
-	replace_builtin = setting_bool("presence_footsteps_replace_builtin", true),
-	replace_inferred_builtin = setting_bool("presence_footsteps_replace_inferred_builtin", true),
-	stand_sounds = setting_bool("presence_footsteps_stand_sounds", false),
-	foliage = setting_bool("presence_footsteps_foliage", true),
-	foliage_gain = setting_number("presence_footsteps_foliage_gain", 0.65, 0),
-	wet_surfaces = setting_bool("presence_footsteps_wet_surfaces", true),
-	wet_gain = setting_number("presence_footsteps_wet_gain", 0.50, 0),
-	footwear = setting_bool("presence_footsteps_footwear", true),
-	player_gain = setting_number("presence_footsteps_player_gain", 1.0, 0),
-	other_player_gain = setting_number("presence_footsteps_other_player_gain", 1.0, 0),
-	entities = setting_bool("presence_footsteps_entities", false),
-	max_entities = setting_number("presence_footsteps_max_entities", 50, 1),
-	entity_targets = setting_string("presence_footsteps_entity_targets", "all"),
-	ignored_entities = setting_string("presence_footsteps_ignored_entities", ""),
-	passive_entity_gain = setting_number("presence_footsteps_passive_entity_gain", 0.70, 0),
-	hostile_entity_gain = setting_number("presence_footsteps_hostile_entity_gain", 0.85, 0),
-	object_gain = setting_number("presence_footsteps_object_gain", 0.75, 0),
-	winged_players = setting_bool("presence_footsteps_winged_players", false),
-	debug = setting_bool("presence_footsteps_debug", false),
-}
+local function build_settings()
+	local settings = {
+		enabled = setting_bool("presence_footsteps_enabled", true),
+		gain = setting_number("presence_footsteps_gain", 1.0, 0),
+		max_hear_distance = setting_number("presence_footsteps_max_hear_distance", 16, 1),
+		replace_builtin = setting_bool("presence_footsteps_replace_builtin", true),
+		replace_inferred_builtin = setting_bool("presence_footsteps_replace_inferred_builtin", true),
+		stand_sounds = setting_bool("presence_footsteps_stand_sounds", false),
+		foliage = setting_bool("presence_footsteps_foliage", true),
+		foliage_gain = setting_number("presence_footsteps_foliage_gain", 0.65, 0),
+		wet_surfaces = setting_bool("presence_footsteps_wet_surfaces", true),
+		wet_gain = setting_number("presence_footsteps_wet_gain", 0.50, 0),
+		footwear = setting_bool("presence_footsteps_footwear", true),
+		player_gain = setting_number("presence_footsteps_player_gain", 1.0, 0),
+		other_player_gain = setting_number("presence_footsteps_other_player_gain", 1.0, 0),
+		entities = setting_bool("presence_footsteps_entities", false),
+		max_entities = setting_number("presence_footsteps_max_entities", 50, 1),
+		entity_targets = setting_string("presence_footsteps_entity_targets", "all"),
+		ignored_entities = setting_string("presence_footsteps_ignored_entities", ""),
+		passive_entity_gain = setting_number("presence_footsteps_passive_entity_gain", 0.70, 0),
+		hostile_entity_gain = setting_number("presence_footsteps_hostile_entity_gain", 0.85, 0),
+		object_gain = setting_number("presence_footsteps_object_gain", 0.75, 0),
+		winged_players = setting_bool("presence_footsteps_winged_players", false),
+		debug = setting_bool("presence_footsteps_debug", false),
+	}
 
-pf.settings.entity_targets = tostring(pf.settings.entity_targets):lower()
-if pf.settings.entity_targets ~= "all"
-	and pf.settings.entity_targets ~= "players_and_hostiles"
-	and pf.settings.entity_targets ~= "players_only" then
-	pf.settings.entity_targets = "all"
+	settings.entity_targets = tostring(settings.entity_targets):lower()
+	if settings.entity_targets ~= "all"
+		and settings.entity_targets ~= "players_and_hostiles"
+		and settings.entity_targets ~= "players_only" then
+		settings.entity_targets = "all"
+	end
+
+	return settings
+end
+
+pf.settings = build_settings()
+
+function pf.reload_settings()
+	pf.settings = build_settings()
+	pf.debug("settings reloaded after ModMenu save")
 end
 
 pf.sound_groups = dofile(pf.modpath .. "/data/sounds.lua")
@@ -83,6 +94,7 @@ dofile(pf.modpath .. "/nodes.lua")
 dofile(pf.modpath .. "/equipment.lua")
 dofile(pf.modpath .. "/tracker.lua")
 dofile(pf.modpath .. "/entities.lua")
+dofile(pf.modpath .. "/modmenu.lua")
 
 core.register_on_mods_loaded(function()
 	pf.rebuild_node_cache()

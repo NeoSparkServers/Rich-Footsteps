@@ -60,6 +60,11 @@ playback without forcing thousands of item overrides during load.
 
 ## Settings
 
+Settings are available in the vanilla settings dialog (All settings -> Mods)
+and, when the Mod Menu mod is installed, in a dedicated Mod Menu screen with
+tabs for general options, volumes, layers, and entities/debugging. Changes
+saved from Mod Menu apply immediately.
+
 - `presence_footsteps_enabled`: enable or disable this mod.
 - `presence_footsteps_gain`: global volume multiplier.
 - `presence_footsteps_max_hear_distance`: positional sound range.
