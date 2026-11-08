@@ -26,8 +26,12 @@ is tuned to a vanilla-like cadence of roughly two steps per second.
 
 This is an unofficial Luanti port/reimplementation. It is not affiliated with,
 endorsed by, or maintained by the original Presence Footsteps authors. It is
-inspired by the MIT-licensed Presence Footsteps 1.13.0+26.1 baseline. No assets,
-data, or code from Presence Footsteps 1.13.2+26.1 or later are used.
+inspired by the MIT-licensed Presence Footsteps 1.13.0+26.1 baseline
+([tag](https://github.com/Sollace/Presence-Footsteps/tree/1.13.0%2B26.1),
+[pinned commit](https://github.com/Sollace/Presence-Footsteps/commit/9c6bca3bbef4deee1ff5b21715e9554ada80268e)).
+No assets, data, or code from Presence Footsteps 1.13.2+26.1 or later are used.
+See `THIRD_PARTY_NOTICES.md` for the exact upstream origin of every bundled
+sound and data file.
 
 ## Table of Contents
 
@@ -222,11 +226,13 @@ Little Pony contributors. Rich Footsteps is an unofficial Luanti
 port/reimplementation inspired by the MIT-licensed Presence Footsteps
 1.13.0+26.1 baseline and is not endorsed by the original authors.
 
-The bundled sound assets and converted configuration data come from the local
-Presence-Footsteps-1.13.0-26.1 source package included with this project. No
-assets, data, or code from Presence Footsteps 1.13.2+26.1 or later are used. The
-original Java/Fabric code is used as a reference and is not shipped as
-executable Luanti code.
+The bundled sound assets and upstream-derived data come from the upstream
+Presence Footsteps `1.13.0+26.1` release, pinned by tag and commit hash in
+`THIRD_PARTY_NOTICES.md` (the port's working copy of the upstream source was a
+local unpacked copy of that exact release, verified byte-identical to the
+pinned tag). No assets, data, or code from Presence Footsteps 1.13.2+26.1 or
+later are used. The original Java/Fabric code is used as a reference and is not
+shipped as executable Luanti code.
 
 Luanti cannot exactly reproduce Minecraft client mixins, Mine Little Pony stance
 auto-detection, or Minecraft's per-foot voxel collision solver. This port uses
@@ -236,7 +242,7 @@ explicit API calls, settings, and Luanti node/object APIs for those cases.
 | --- | --- | --- |
 | New Luanti port code | LGPL-3.0-or-later | Weak copyleft: games/modpacks may use the mod, while modifications to LGPL-covered port code should stay free. |
 | Port-owned docs/metadata | LGPL-3.0-or-later | Includes README/package metadata written for this Luanti port. |
-| Bundled upstream sound assets | MIT | Converted/renamed from upstream mono OGG assets; upstream copyright notice is preserved. |
+| Bundled upstream sound assets | MIT | Taken from upstream's mono asset tree (`presencefootstepsmono/sounds/`, tag `1.13.0+26.1`); 439 files byte-identical, 16 water files lossy re-encodes; all renamed for Luanti positional playback. Upstream copyright notice is preserved. |
 | Upstream-derived generated data | MIT notice preserved | Lua data generated/converted from upstream JSON/resource-pack configuration; Luanti glue around it is LGPL. |
 
 See `LICENSE` and `THIRD_PARTY_NOTICES.md` for the full package licensing
